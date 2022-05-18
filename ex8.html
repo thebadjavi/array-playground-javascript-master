@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>Los michis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <div class="w3-container">
+        <h2>Base de datos de Progats </h2>
+        <p></p>
+
+        <table class="w3-table-all">
+            <thead>
+                <tr class="w3-red">
+                    <th>Nombre michi</th>
+                    <th>Propietario</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="nombre">Bigotes</td>
+                    <td>Smith</td>
+                    <td class="ingreso">50</td>
+                </tr>
+                <tr>
+                    <td class="nombre">Atunero</td>
+                    <td>Jackson</td>
+                    <td class="ingreso">94</td>
+                </tr>
+                <tr>
+                    <td class="nombre">Mordisquitos</td>
+                    <td>Johnson</td>
+                    <td class="ingreso">67</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>Ingresos totales: <span id="ingresos"></span></p>
+    </div>
+    <script>
+
+        // querySelectorAll: https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+        /** Ejemplo. El siguiente código recorre todas las celdas con el nombre del michi y las muestra por consola. Mira el terminal del navegador Web para comprobarlo!  */
+
+        let nombresMichis = document.querySelectorAll(".nombre");
+
+        for (let i = 0; i < nombresMichis.length; i++) {
+            console.log("El nombre del michi es: ", nombresMichis[i].textContent);
+        };
+
+        /**
+         * Ejercicio 1: Recorre ahora todas las celdas de los ingresos y muestrálos por el terminal, similar al ejemplo.
+         */
+         let ingresosMichis = document.querySelectorAll(".ingreso");
+
+         for (let i = 0; i < ingresosMichis.length; i++) {
+            console.log("El ingreso del michi es: ", ingresosMichis[i].textContent);
+        };
+        /**
+         * Ejercicio 2: Amplia el ejercicio 1, y ahora SUMA el valor de todos los ingresos y pon el resultado en <span id="ingresos">. RECUERDA primero escribir lo que quieres hacer, qué variables vas a necesitar, con lenguaje natural. Después, usa JavaScript
+         */
+        let sumatotal=0;
+        for (let i = 0; i < ingresosMichis.length; i++) {
+            sumatotal= parseInt(sumatotal) + parseInt(ingresosMichis[i].textContent);
+            console.log("la suma total es "+sumatotal);
+        };
+        
+
+        /**
+         * Ejercicio Bonus: Serias capaz de mostrar el nombre de todos los propietarios por el terminal SIN MODIFICAR el HTML?
+         */
+        
+
+
+    </script>
+</body>
+
+</html>
